@@ -20,7 +20,7 @@
     }
     header h1 {
       margin: 0;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
     main {
       padding: 2rem;
@@ -36,14 +36,29 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
+    .note {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Web AR モデルギャラリー</h1>
-    <p>3Dモデルをブラウザで表示し、ARで体験できます</p>
+    <p>3Dモデルをブラウザで表示し、対応スマートフォンではARで体験できます</p>
   </header>
   <main>
+    <section class="note">
+      <p>
+        対応しているスマートフォン（iPhone / Android）では、<br>
+        モデル下部に表示される <strong>「AR」ボタン</strong> を押すことで、<br>
+        カメラを通して実物空間に3Dモデルを配置して楽しむことができます。<br>
+        パソコンでは3Dモデルを回転・拡大縮小してご覧いただけます。
+      </p>
+    </section>
+
     <section class="viewer-container">
       <h2>Astronaut（サンプルモデル）</h2>
       <model-viewer src="https://yuuzutsu.github.io/web-ar-models/Astronaut.glb"
@@ -54,10 +69,10 @@
                     camera-controls></model-viewer>
     </section>
 
-    <!-- ここに他のモデルを追加していく予定 -->
+    <!-- 他のモデルを追加する場合は以下のようにセクションを増やす -->
     <!--
     <section class="viewer-container">
-      <h2>モデル名</h2>
+      <h2>別のモデル名</h2>
       <model-viewer src="モデルのGLBファイルURL"
                     ios-src="モデルのUSDZファイルURL"
                     alt="説明文"
